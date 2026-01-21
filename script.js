@@ -1076,19 +1076,19 @@ const isVocabularyGame = document.getElementById("isVocabularyGame");
 const showPronunciationGame = document.getElementById("showPronunciationGame");
 const isPronunciationGame = document.getElementById("isPronunciationGame");
 
-const showPinyiGame = document.getElementById("showPinyinGame");
-const isPinyiGame = document.getElementById("isPinyinGame");
+// const showPinyiGame = document.getElementById("showPinyinGame");
+// const isPinyiGame = document.getElementById("isPinyinGame");
 
 const showSentenceGame = document.getElementById("showSentenceGame");
 const isSentenceGame = document.getElementById("isSentenceGame");
 
-const showPersonNameGame = document.getElementById("showPersonNameGame");
-const isPersonNameGame = document.getElementById("isPersonNameGame");
+// const showPersonNameGame = document.getElementById("showPersonNameGame");
+// const isPersonNameGame = document.getElementById("isPersonNameGame");
 
 showVocabularyGame.onclick = function () {
   isVocabularyGame.style.display = "block";
   isPronunciationGame.style.display = "none";
-  isPinyiGame.style.display = "none";
+  // isPinyiGame.style.display = "none";
   isSentenceGame.style.display = "none";
   isPersonNameGame.style.display = "none";
   vocabularyGame();
@@ -1097,39 +1097,39 @@ showVocabularyGame.onclick = function () {
 showPronunciationGame.onclick = function () {
   isVocabularyGame.style.display = "none";
   isPronunciationGame.style.display = "block";
-  isPinyiGame.style.display = "none";
+  // isPinyiGame.style.display = "none";
   isSentenceGame.style.display = "none";
   isPersonNameGame.style.display = "none";
   pronunciatioGame();
 }
 
-showPinyiGame.onclick = function () {
-  isVocabularyGame.style.display = "none";
-  isPronunciationGame.style.display = "none";
-  isPinyiGame.style.display = "block";
-  isSentenceGame.style.display = "none";
-  isPersonNameGame.style.display = "none";
-  pinyinGame();
-}
+// showPinyiGame.onclick = function () {
+//   isVocabularyGame.style.display = "none";
+//   isPronunciationGame.style.display = "none";
+//   isPinyiGame.style.display = "block";
+//   isSentenceGame.style.display = "none";
+//   isPersonNameGame.style.display = "none";
+//   pinyinGame();
+// }
 
 showSentenceGame.onclick = function () {
   isVocabularyGame.style.display = "none";
   isPronunciationGame.style.display = "none";
-  isPinyiGame.style.display = "none";
+  // isPinyiGame.style.display = "none";
   isSentenceGame.style.display = "block";
   isPersonNameGame.style.display = "none";
   sentenceGame();
 }
 
 
-showPersonNameGame.onclick = function () {
-  isVocabularyGame.style.display = "none";
-  isPronunciationGame.style.display = "none";
-  isPinyiGame.style.display = "none";
-  isSentenceGame.style.display = "none";
-  isPersonNameGame.style.display = "block";
-  personNameGame();
-}
+// showPersonNameGame.onclick = function () {
+//   isVocabularyGame.style.display = "none";
+//   isPronunciationGame.style.display = "none";
+//   isPinyiGame.style.display = "none";
+//   isSentenceGame.style.display = "none";
+//   isPersonNameGame.style.display = "block";
+//   personNameGame();
+// }
 
 
 
@@ -1203,12 +1203,12 @@ window.onclick = function (event) {
 }
 
 const word = document.getElementById("word");
-const showWordBtn = document.getElementById("showWordBtn");
+// const showWordBtn = document.getElementById("showWordBtn");
 const closeWordBtn = document.getElementById("closeWordBtn");
 
-showWordBtn.onclick = function () {
-  word.style.display = "block";
-}
+// showWordBtn.onclick = function () {
+//   word.style.display = "block";
+// }
 
 closeWordBtn.onclick = function () {
   word.style.display = "none";
@@ -1216,28 +1216,28 @@ closeWordBtn.onclick = function () {
 
 
 const radical = document.getElementById("radical");
-const showRadicalBtn = document.getElementById("showRadicalBtn");
+// const showRadicalBtn = document.getElementById("showRadicalBtn");
 const closeRadicalBtn = document.getElementById("closeRadicalBtn");
 const radicalTableBody = document.getElementById("radicalTableBody");
 
 // giả sử phần này chạy ngay sau khi DOM sẵn sàng:
 radicalTableBody.addEventListener('click', onCopyCell);
 
-showRadicalBtn.onclick = function () {
-  radicalTableBody.innerHTML = ""; // clear bảng cũ
-  radicalList.forEach((word, index) => {
-    const row = `<tr>
-      <td>${index + 1}</td>
-      <td class="copy_word">${word.chinese}</td>
-      <td>${word.mean}</td>
-      <td>${word.sino_vietnamese}</td>
-      <td>${word.pinyin}</td>
-      <td>${word.pronunciation}</td>
-    </tr>`;
-    radicalTableBody.innerHTML += row;
-  });
-  radical.style.display = "block";
-}
+// showRadicalBtn.onclick = function () {
+//   radicalTableBody.innerHTML = ""; // clear bảng cũ
+//   radicalList.forEach((word, index) => {
+//     const row = `<tr>
+//       <td>${index + 1}</td>
+//       <td class="copy_word">${word.chinese}</td>
+//       <td>${word.mean}</td>
+//       <td>${word.sino_vietnamese}</td>
+//       <td>${word.pinyin}</td>
+//       <td>${word.pronunciation}</td>
+//     </tr>`;
+//     radicalTableBody.innerHTML += row;
+//   });
+//   radical.style.display = "block";
+// }
 
 closeRadicalBtn.onclick = function () {
   radical.style.display = "none";
@@ -1273,7 +1273,7 @@ closeGrammarBtn.onclick = function () {
 
 
 const personName = document.getElementById("personName");
-const showPersonNameBtn = document.getElementById("showPersonNameBtn");
+// const showPersonNameBtn = document.getElementById("showPersonNameBtn");
 const closePersonNameBtn = document.getElementById("closePersonNameBtn");
 const personNameTableBody = document.getElementById("personNameTableBody");
 const searchPersonName = document.getElementById("searchPersonName");
@@ -1297,11 +1297,11 @@ function renderPersonName(list) {
 }
 
 // Khi mở popup -> render toàn bộ
-showPersonNameBtn.onclick = function () {
-  searchPersonName.value = ""; // reset ô tìm kiếm
-  renderPersonName(personNameData);
-  personName.style.display = "block";
-}
+// showPersonNameBtn.onclick = function () {
+//   searchPersonName.value = ""; // reset ô tìm kiếm
+//   renderPersonName(personNameData);
+//   personName.style.display = "block";
+// }
 
 // Khi gõ tìm kiếm -> lọc dữ liệu
 searchPersonName.addEventListener("input", function () {
