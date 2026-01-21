@@ -131,7 +131,7 @@ function vocabularyGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = activeVocabulary[idx].chinese;
+      li.textContent = activeVocabulary[idx].english;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -347,7 +347,7 @@ function pronunciatioGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = vocabulary[idx].chinese;
+      li.textContent = vocabulary[idx].english;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -552,7 +552,7 @@ function pinyinGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = vocabulary[idx].chinese;
+      li.textContent = vocabulary[idx].english;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -757,7 +757,7 @@ function sentenceGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = sentence[idx].chinese;
+      li.textContent = sentence[idx].english;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -962,7 +962,7 @@ function personNameGame() {
     const chineseIndices = shuffle(currentSlice);
     for (const idx of chineseIndices) {
       const li = document.createElement("li");
-      li.textContent = personNameData[idx].chinese;
+      li.textContent = personNameData[idx].english;
       li.dataset.idx = String(idx); // dùng index để đối chiếu
       li.classList.add("copy_word");
       li.addEventListener("click", onCopyCell);
@@ -1152,10 +1152,9 @@ function renderVocabulary(list) {
   const rows = list.map((word, index) => `
     <tr>
       <td>${word.index}</td>
-      <td class="copy_word">${word.chinese}</td>
+      <td class="copy_word">${word.english}</td>
       <td>${word.mean}</td>
       <td>${word.pronunciation}</td>
-      <td>${word.pinyin}</td>
     </tr>
   `).join(""); // nối thành 1 string duy nhất
 
@@ -1174,9 +1173,8 @@ btn.onclick = function () {
 searchInputVocabulary.addEventListener("input", function () {
   const keyword = this.value.toLowerCase().trim();
   const filtered = vocabularyList.filter(word =>
-    word.chinese.includes(keyword) ||
+    word.english.includes(keyword) ||
     word.mean.toLowerCase().includes(keyword) ||
-    word.pinyin.toLowerCase().includes(keyword) ||
     word.pronunciation.toLowerCase().includes(keyword)
   );
   renderVocabulary(filtered);
