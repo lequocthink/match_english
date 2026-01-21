@@ -1,0 +1,1150 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 50px;
+}
+
+.column {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;* { box-sizing: border-box; }
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0;
+  background: #f6f7fb;
+  color: #222;
+}
+
+html {
+  /* Cho phép cuộn mượt mà cho toàn bộ trang */
+  scroll-behavior: smooth; 
+}
+
+#vocabModal {
+  scroll-behavior: smooth; 
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar h1 { margin: 0; font-size: 20px; }
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.controls select, .controls button {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.stats {
+  display: flex;
+  gap: 20px;
+  padding: 12px 24px;
+  color: #444;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 16px 24px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.column {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+.column h2 {
+  margin: 4px 0 12px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+li {
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.06s ease, background 0.15s ease, border-color 0.15s ease;
+}
+li:hover { transform: translateY(-1px); background: #f0f7ff; }
+li.selected { border-color: #60a5fa; background: #eaf5ff; }
+li.correct { background: #d1fae5 !important; border-color: #10b981 !important; }
+li.wrong { background: #fee2e2 !important; border-color: #ef4444 !important; }
+li.disabled { opacity: 0.6; pointer-events: none; }
+
+.notice {
+  text-align: center;
+  color: #555;
+  min-height: 24px;
+  padding-bottom: 24px;
+}
+
+}
+
+li {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+li:hover {
+    background: #e6f7ff;
+}
+
+li.correct {
+    background: #b7eb8f !important;
+}
+
+li.wrong {
+    background: #ffa39e !important;
+}
+
+
+
+/* Open game */
+#isVocabularyGame {
+  display: none;
+}
+
+#isPronunciationGame {
+  display: none;
+}
+
+#isPinyinGame {
+  display: none;
+}
+
+#isSentenceGame {
+  display: none;
+}
+
+#isPersonNameGame {
+  display: none;
+}
+
+
+/* table */
+
+/* Popup (ẩn mặc định) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Nội dung popup */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Nút đóng */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+
+
+.radical, .word, .grammar, .personName {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(94, 94, 94, 0.9);
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  /* opacity: 10%; */
+}
+
+.radical_content, .word_content, .grammar_content, .person_name_content {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  margin-top: 40px;
+  /* height: 800px; */
+  max-height: 80vh;
+  /* overflow-y: scroll; */
+  overflow: auto;
+}
+
+#closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn, #closePersonNameBtn {
+  position: sticky;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+#topVocabulary {
+  position: sticky;
+  right: 10px;
+  top: 22%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  background-color: white;
+}
+
+#bottomVocabulary {
+  position: sticky;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  background-color: white;
+}
+
+
+/* feature copy */
+.copy_word {
+  cursor: pointer;
+}
+.copy_word:hover {
+  background-color: #f0f0f0;
+}
+
+
+.toast {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -100px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+.app {
+  width: 70%;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+header {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+
+
+.main {
+  position: relative;
+  display: flex;
+}
+.left_main {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
+  padding: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  
+  
+}
+
+.right_main {
+  width: 70%;
+  /* display: flex;
+  flex-direction: row; */
+  /* text-align: left; */
+  /* padding-left: 10px; */
+  margin-left: 20px;
+  padding: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.title_left {
+  line-height: 40px;
+  height: 40px; 
+  padding: 10px; 
+  margin: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.title_right {  
+  width: 100%; 
+  line-height: 40px;
+  height: 40px; 
+  padding: 10px; 
+  margin: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* .right_main_button { */
+  /* text-align: left; */
+/* } */
+
+.loading-text {
+	place-self: center;
+	background: linear-gradient(90deg, #00f, #0ff, #00f) -100%/ 200%;
+	/* being excessively careful with compat, 
+	 * though this has been supported unprefixed and 
+	 * in the shorthand across major browsers for a while */
+	-webkit-background-clip: text;
+	        background-clip: text;
+	/* use color, don't use -webkit-text-fill-color anymore, 
+	 * was meant to solve a problem we haven't had in years */
+	color: transparent;
+	/* font: 900 clamp(2em, 10vw, 10em) exo, sans-serif; */
+  font-size: 50px;
+	animation: shimmer 2s linear infinite;
+  padding: 20px;
+  margin-top: 10px;
+  border: 1px solid rgba(1, 41, 238, 0.8);
+  box-shadow: rgba(1, 41, 238, 0.4) 5px 5px, rgba(1, 41, 238, 0.3) 10px 10px, rgba(1, 41, 238, 0.2) 15px 15px, rgba(1, 41, 238, 0.1) 20px 20px, rgba(1, 41, 238, 0.05) 25px 25px;
+}
+
+@keyframes shimmer { to { background-position: 100% } }
+
+
+#searchInputVocabulary {
+  border: 2px solid black;
+  width:90%; 
+  padding:8px; 
+  margin-bottom:10px;
+}
+
+.limitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#limitWordsV {
+  width: 100px;
+  height: 20px;
+  margin: 0 20px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+#applyLimitBtnV {
+  margin: 0;
+  height: 34px;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px;
+}
+
+#searchPersonName {
+  width:90%; 
+  padding:8px; 
+  margin-bottom:10px;
+}
+
+.showVocabulary {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.showVocabulary button {
+  font-size: 50px;
+}
+
+.popup_header {
+  position: sticky;
+  right: 10px;
+  top: 0px;
+  width: 100%px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* custom */
+
+.select_option {
+    width: 40px;
+    height: 30px;
+}
+
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* height: 36px; */
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+
+
+/* CSS */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  /* max-width: 100%; */
+  /* min-width: 140px; */
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 10px 10px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    /* min-width: 196px; */
+  }
+}
+
+/* border */
+
+
+/* mobile */
+
+
+/* @media (max-width: 767px) {
+  .app {
+    width: 90%;
+  }
+} */
+
+
+@media (max-width: 767px) {
+  .app {
+    width: 95%;
+    margin: 10px 0;
+  }
+
+  .button-74 {
+    width: 90% !important;
+    padding: 0 25px;
+    font-size: 50px;
+    line-height: 80px;
+  }
+
+  .loading-text {
+    font-size: 80px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .left_main {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .right_main {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .right_main_button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+  }
+
+
+  .game-container {
+    gap: 10px;
+  }
+
+  #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin, #wordsPerRoundPersonName, #wordsPerRoundSentence {
+    width: 70px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .button-8 {
+    margin-right: 10px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .button-54 {
+    width: 90%;
+    font-size: 40px;
+    
+  }
+
+  .right_main_button {
+    align-items: center;
+  }
+
+  .text_mobile_30 {
+    font-size: 40px;
+  }
+
+  .select_option {
+    font-size: 20px;
+  }
+
+  .title_left {
+    margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+  .title_right {
+    margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+
+  .radical, .word, .grammar, .personName {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(94, 94, 94, 0.9);
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    /* opacity: 10%; */
+  }
+
+  .grammar_content {
+    font-size: 25px;
+    width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+  }
+
+  .modal-content, .word_content, .radical_content, .person_name_content {
+    font-size: 25px;
+  }
+
+  .grammar_content table {
+    /* width: 1100px; */
+    table-layout: auto; 
+    width: auto;      
+    border-collapse: collapse;
+  }
+
+  .grammar_content td {
+    white-space: nowrap;  
+    word-wrap: break-word; 
+    /* max-width: 300px;  */
+
+  }
+
+   #closeGrammarBtn {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  .button-85 {
+    font-size: 30px;
+  }
+
+  .button-8 {
+    font-size: 20px;
+  }
+
+  #closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn, #closePersonNameBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .close {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .popup_header {
+    position: sticky;
+    right: 10px;
+    /* top: 10px; */
+    width: 100%px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .limitbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  #limitWordsV {
+    width: 100px;
+    height: 32px;
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  #applyLimitBtnV {
+    margin: 0;
+    height: 46px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  #topVocabulary {
+    top: 15%;
+  }
+  #bottomVocabulary, #topVocabulary {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 30px;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .app {
+    width: 95%;
+    margin: 10px 0;
+  }
+
+  .button-74 {
+    width: 90% !important;
+    padding: 0 25px;
+    font-size: 50px;
+    line-height: 80px;
+  }
+
+  .loading-text {
+    font-size: 80px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .left_main {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .right_main {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .right_main_button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+  }
+
+
+  .game-container {
+    gap: 10px;
+  }
+
+  #wordsPerRoundV, #wordsPerRoundP, #wordsPerRoundPinyin, #wordsPerRoundPersonName, #wordsPerRoundSentence {
+    width: 70px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .button-8 {
+    margin-right: 10px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .button-54 {
+    width: 90%;
+    font-size: 40px;
+    
+  }
+
+  .right_main_button {
+    align-items: center;
+  }
+
+  .text_mobile_30 {
+    font-size: 40px;
+  }
+
+  .select_option {
+    font-size: 20px;
+  }
+
+  .title_left {
+    margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+  .title_right {
+    margin: 5px 15px 15px 15px;
+    font-size: 75px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+
+  .radical, .word, .grammar, .personName {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(94, 94, 94, 0.9);
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+    /* opacity: 10%; */
+  }
+
+  .grammar_content {
+    font-size: 25px;
+    width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+  }
+
+  .modal-content, .word_content, .radical_content, .person_name_content {
+    font-size: 25px;
+  }
+
+  .grammar_content table {
+    /* width: 1100px; */
+    table-layout: auto; 
+    width: auto;      
+    border-collapse: collapse;
+  }
+
+  .grammar_content td {
+    white-space: nowrap;  
+    word-wrap: break-word; 
+    /* max-width: 300px;  */
+
+  }
+
+   #closeGrammarBtn {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  .button-85 {
+    font-size: 30px;
+  }
+
+  .button-8 {
+    font-size: 20px;
+  }
+
+  #searchInputVocabulary {
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    width: 90%;
+  }
+
+  #searchPersonName {
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    width: 90%;
+  }
+
+  #closeRadicalBtn, #closeWordBtn, #closeVocabulary, #closeGrammarBtn, #closePersonNameBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .close {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .popup_header {
+    position: sticky;
+    right: 10px;
+    /* top: 10px; */
+    width: 100%px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .limitbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  #limitWordsV {
+    width: 100px;
+    height: 32px;
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  #applyLimitBtnV {
+    margin: 0;
+    height: 46px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  #topVocabulary {
+    top: 30%;
+  }
+  #bottomVocabulary, #topVocabulary {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 30px;
+  }
+
+}
+
+/* Tablet lớn (1024px → 1279px) */
+@media only screen and (min-width: 64em) and (max-width: 79.9375em) {
+  .button-74 {
+    font-size: 16px;
+  }
+
+  .button-54 {
+    font-size: 14px;
+  }
+
+  .app {
+    width: 95%;
+  }
+}
+

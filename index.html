@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FNG Chinese</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        html {
+            /* Cho phép cuộn mượt mà cho toàn bộ trang */
+            scroll-behavior: smooth; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+
+        #vocabTable {
+            display: none;
+            /* ẩn bảng khi chưa bấm */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <div id="toast"></div>
+
+            <h1 style="text-transform: uppercase;" class="loading-text">FNG Chinese</h1>
+
+
+            <!-- show vocabulary button -->
+            <div class="showVocabulary" id="showVocabulary">
+                <button class="button-64" role="button"><span class="text">👁</span></button>
+            </div>
+            <!-- Popup -->
+            <div id="vocabModal" class="modal">
+                <div class="modal-content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+
+                    <div class="popup_header">
+                        <span class="close" id="closeVocabulary">&times;</span>
+                        <h2>Tất cả từ vựng</h2>
+                        
+                        <!-- ô tìm kiếm -->
+                        <input type="text" id="searchInputVocabulary" placeholder="Tìm kiếm từ vựng...">
+                    </div>
+                    <span id="topLineVocablary"></span>
+                    <a href="#bottomLineVocablary" class="close" id="topVocabulary" >
+                        ⬇ 
+                    </a>
+                        <!-- <span class="close" id="closeVocabulary">&times;</span> -->
+
+
+                    <table border="1" width="100%">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Từ Vựng</th>
+                                <th>Ý nghĩa</th>
+                                <th>Cách đọc</th>
+                                <th>Pinyin</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vocabTableBody"></tbody>
+                    </table>
+                    <a href="#topLineVocablary" class="close" id="bottomVocabulary" >
+                        ⬆ 
+                    </a>
+                    <span id="bottomLineVocablary"></span>
+                    <!-- <button type="button" id="bottomVocablary" >My Button</button> -->
+                </div>
+            </div>
+
+            <!-- word popup -->
+            <div class="word" id="word">
+                <div class="word_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closeWordBtn">&times;</span>
+                    <div>
+                        <h2>Thanh mẫu (Phụ âm)</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Phân loại</th>
+                                    <th>STT</th>
+                                    <th>Phụ âm</th>
+                                    <th>Cách phát âm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- group 1 -->
+                                <tr>
+                                    <td colspan="4">
+                                        <b>
+                                            Phụ âm đơn
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">
+                                        Nhóm âm hai môi và răng môi
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        b
+                                    </td>
+                                    <td>
+                                        Phát âm như “pua” trong tiếng Việt, hai môi tiếp xúc,rồi mở nhanh
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        p
+                                    </td>
+                                    <td>
+                                        Phát âm như “pua”, nhưng bật hơi mạnh.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        f
+                                    </td>
+                                    <td>
+                                        Phát âm như phụ âm “ph” trong tiếng Việt
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        4
+                                    </td>
+                                    <td>
+                                        m
+                                    </td>
+                                    <td>
+                                        Phát âm như phụ âm “m” trong tiếng Việt
+                                    </td>
+                                </tr>
+
+                                <!-- group 2 -->
+                                <tr>
+                                    <td rowspan="4">
+                                        Nhóm âm đầu lưỡi
+                                    </td>
+                                    <td>
+                                        5
+                                    </td>
+                                    <td>
+                                        d
+                                    </td>
+                                    <td>
+                                        Phát âm như phụ âm “t” trong tiếng Việt
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        6
+                                    </td>
+                                    <td>
+                                        t
+                                    </td>
+                                    <td>
+                                        Phát âm như phụ âm “th” trong tiếng Việt, có bật hơi
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        7
+                                    </td>
+                                    <td>
+                                        n
+                                    </td>
+                                    <td>
+                                        Phát âm như “n” trong tiếng Việt
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        l
+                                    </td>
+                                    <td>
+                                        Phát âm như “l” trong tiếng Việt
+                                    </td>
+                                </tr>
+
+                                <!-- group 3 -->
+                                <tr>
+                                    <td rowspan="4">
+                                        Nhóm âm đầu lưỡi trước
+                                    </td>
+                                    <td>
+                                        9
+                                    </td>
+                                    <td>
+                                        z
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” trong tiếng Việt, âm tắc sát không bật hơi,đầu lưỡi thẳng tiếp
+                                        xúc
+                                        giữa hai hàm răng trên và dưới.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        10
+                                    </td>
+                                    <td>
+                                        c
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” nhưng khác là phải bật hơi.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        11
+                                    </td>
+                                    <td>
+                                        s
+                                    </td>
+                                    <td>
+                                        Phát âm như “x” trong tiếng Việt, lưỡi sau chân răng
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        12
+                                    </td>
+                                    <td>
+                                        r
+                                    </td>
+                                    <td>
+                                        Phát âm như phụ âm “r” nhưng không rung lưỡi
+                                    </td>
+                                </tr>
+
+                                <!-- group 4 -->
+                                <tr>
+                                    <td rowspan="3">
+                                        Nhóm âm mặt lưỡi
+                                    </td>
+                                    <td>
+                                        13
+                                    </td>
+                                    <td>
+                                        j
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” trong tiếng Việt, đầu lưỡi chạm vào chân răng hàm dưới
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        14
+                                    </td>
+                                    <td>
+                                        q
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” nhưng bật hơi
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        15
+                                    </td>
+                                    <td>
+                                        x
+                                    </td>
+                                    <td>
+                                        Phát âm như “x” trong tiếng Việt, đầu lưỡi chạm vào chân răng hàm dưới
+                                    </td>
+                                </tr>
+
+                                <!-- group 5 -->
+                                <tr>
+                                    <td rowspan="3">
+                                        Nhóm âm cuống lưỡi
+                                    </td>
+                                    <td>
+                                        16
+                                    </td>
+                                    <td>
+                                        g
+                                    </td>
+                                    <td>
+                                        Phát âm như “c” trong tiếng Việt
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        17
+                                    </td>
+                                    <td>
+                                        k
+                                    </td>
+                                    <td>
+                                        Phát âm như “kh” nhưng tắc và bật hơi mạnh ở cuống họng
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        18
+                                    </td>
+                                    <td>
+                                        h
+                                    </td>
+                                    <td>
+                                        Phát âm như “h” trong tiếng Việt, sát ở cuống họng, giống như âm giữa “h” và
+                                        “kh”.
+                                    </td>
+                                </tr>
+
+                                <!-- group 6 -->
+                                <tr>
+                                    <td colspan="4">
+                                        <b>
+                                            Phụ âm kép
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">
+                                        Nhóm âm đầu lưỡi sau
+                                    </td>
+                                    <td>
+                                        19
+                                    </td>
+                                    <td>
+                                        zh
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” trong tiếng Việt tròn môi, uốn lưỡi
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        20
+                                    </td>
+                                    <td>
+                                        ch
+                                    </td>
+                                    <td>
+                                        Phát âm như “ch” nhưng bật hơi, tròn môi, uốn lưỡi
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        21
+                                    </td>
+                                    <td>
+                                        sh
+                                    </td>
+                                    <td>
+                                        Phát âm như “s” trong tiếng Việt, môi tròn, uốn lưỡi
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <!-- Vận mẫu -->
+                    <div>
+                        <h2>Vận mẫu (Nguyên âm)</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Nguyên âm</th>
+                                    <th>Cách phát âm ( so sánh với tiếng Việt)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- group 1 -->
+                                <tr>
+                                    <td colspan="3">
+                                        <b>
+                                            Đơn vận mẫu (6)
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        a
+                                    </td>
+                                    <td>
+                                        Đọc như “a”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        o
+                                    </td>
+                                    <td>
+                                        Đọc như “ô”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        e
+                                    </td>
+                                    <td>
+                                        Đọc như “ơ” hoặc “ưa”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        4
+                                    </td>
+                                    <td>
+                                        i
+                                    </td>
+                                    <td>
+                                        Đọc như “i”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        5
+                                    </td>
+                                    <td>
+                                        u
+                                    </td>
+                                    <td>
+                                        Đọc như “u”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        6
+                                    </td>
+                                    <td>
+                                        ü
+                                    </td>
+                                    <td>
+                                        Đọc như “uy” tròn môi
+                                    </td>
+                                </tr>
+
+                                <!-- group 2 -->
+                                <tr>
+                                    <td colspan="3">
+                                        <b>
+                                            Kép vận mẫu (13)
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        7
+                                    </td>
+                                    <td>
+                                        ai
+                                    </td>
+                                    <td>
+                                        Đọc như “ai”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        ei
+                                    </td>
+                                    <td>
+                                        Đọc như “ây”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        9
+                                    </td>
+                                    <td>
+                                        ui (=uei)
+                                    </td>
+                                    <td>
+                                        Đọc như “uây”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        10
+                                    </td>
+                                    <td>
+                                        ao
+                                    </td>
+                                    <td>
+                                        Đọc như “ao”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        11
+                                    </td>
+                                    <td>
+                                        ou
+                                    </td>
+                                    <td>
+                                        Đọc như “âu”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        12
+                                    </td>
+                                    <td>
+                                        iu (=iou)
+                                    </td>
+                                    <td>
+                                        Đọc như “i+âu”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        13
+                                    </td>
+                                    <td>
+                                        ie
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ê”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        14
+                                    </td>
+                                    <td>
+                                        üe
+                                    </td>
+                                    <td>
+                                        Đọc như “uy+ê”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        15
+                                    </td>
+                                    <td>
+                                        er
+                                    </td>
+                                    <td>
+                                        Đọc như “ơ” và uốn lưỡi lên
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        16
+                                    </td>
+                                    <td>
+                                        ia
+                                    </td>
+                                    <td>
+                                        Đọc như “i+a”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        17
+                                    </td>
+                                    <td>
+                                        ua
+                                    </td>
+                                    <td>
+                                        Đọc như “oa”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        18
+                                    </td>
+                                    <td>
+                                        uo
+                                    </td>
+                                    <td>
+                                        Đọc như “ua”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        19
+                                    </td>
+                                    <td>
+                                        üan
+                                    </td>
+                                    <td>
+                                        Đọc như “uy+en” => uyên
+                                    </td>
+                                </tr>
+
+                                <!-- group 3 -->
+                                <tr>
+                                    <td colspan="3">
+                                        <b>
+                                            Tam vận mẫu (8)
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        20
+                                    </td>
+                                    <td>
+                                        iao
+                                    </td>
+                                    <td>
+                                        Đọc như “i+eo”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        21
+                                    </td>
+                                    <td>
+                                        iou (viết iu)
+                                    </td>
+                                    <td>
+                                        Đọc như “i+âu”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        22
+                                    </td>
+                                    <td>
+                                        uai
+                                    </td>
+                                    <td>
+                                        Đọc như “oai”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        23
+                                    </td>
+                                    <td>
+                                        uei (viết ui)
+                                    </td>
+                                    <td>
+                                        Đọc như “uây”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        24
+                                    </td>
+                                    <td>
+                                        üan
+                                    </td>
+                                    <td>
+                                        Đọc như “uy+en” => uyên
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        25
+                                    </td>
+                                    <td>
+                                        iong
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ung”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        26
+                                    </td>
+                                    <td>
+                                        uang
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ê”Đọc như “oang”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        27
+                                    </td>
+                                    <td>
+                                        iang
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ang”
+                                    </td>
+                                </tr>
+
+                                <!-- group 4 -->
+                                <tr>
+                                    <td colspan="3">
+                                        <b>
+                                            Vận mẫu mũi (16) (nguyên âm kết thúc bằng -n, -ng)
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        28
+                                    </td>
+                                    <td>
+                                        an
+                                    </td>
+                                    <td>
+                                        Đọc như “an”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        29
+                                    </td>
+                                    <td>
+                                        en
+                                    </td>
+                                    <td>
+                                        Đọc như “ân”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        30
+                                    </td>
+                                    <td>
+                                        in
+                                    </td>
+                                    <td>
+                                        Đọc như “in”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        31
+                                    </td>
+                                    <td>
+                                        un (=uen)
+                                    </td>
+                                    <td>
+                                        Đọc như “u+ân”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        32
+                                    </td>
+                                    <td>
+                                        Ün
+                                    </td>
+                                    <td>
+                                        Đọc như “uyn”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        32
+                                    </td>
+                                    <td>
+                                        ang
+                                    </td>
+                                    <td>
+                                        Đọc như “ang”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        33
+                                    </td>
+                                    <td>
+                                        eng
+                                    </td>
+                                    <td>
+                                        Đọc như “âng”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        34
+                                    </td>
+                                    <td>
+                                        ing
+                                    </td>
+                                    <td>
+                                        Đọc như “ing”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        35
+                                    </td>
+                                    <td>
+                                        ong
+                                    </td>
+                                    <td>
+                                        Đọc như “ung”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        36
+                                    </td>
+                                    <td>
+                                        iang
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ang”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        37
+                                    </td>
+                                    <td>
+                                        uang
+                                    </td>
+                                    <td>
+                                        Đọc như “oang”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        38
+                                    </td>
+                                    <td>
+                                        ueng
+                                    </td>
+                                    <td>
+                                        Đọc như “u+âng”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        39
+                                    </td>
+                                    <td>
+                                        üang
+                                    </td>
+                                    <td>
+                                        Đọc như “oang”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        40
+                                    </td>
+                                    <td>
+                                        iong
+                                    </td>
+                                    <td>
+                                        Đọc như “i+ung”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        41
+                                    </td>
+                                    <td>
+                                        anɡ/ianɡ/uanɡ/üanɡ
+                                    </td>
+                                    <td>
+                                        các biến thể của “ang”
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- radical popup -->
+            <div class="radical" id="radical">
+                <div class="radical_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closeRadicalBtn">&times;</span>
+                    <div>
+                        <h2>Bộ thủ thông dụng</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Bộ</th>
+                                    <th>Ý nghĩa</th>
+                                    <th>Âm Hán Việt</th>
+                                    <th>Pinyin</th>
+                                    <th>Đọc gần đúng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="radicalTableBody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup grammar -->
+            <div class="grammar" id="grammar">
+                <div class="grammar_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closeGrammarBtn">&times;</span>
+                    <div>
+                        <h2>Ngữ pháp</h2>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên ngữ pháp</th>
+                                    <th>Cách sử dụng</th>
+                                    <th>Ví dụ 1</th>
+                                    <th>Ví dụ 2</th>
+                                    <th>Ví dụ 3</th>
+                                </tr>
+                            </thead>
+                            <tbody id="grammarTableBody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup person name -->
+            <div class="personName" id="personName">
+                <div class="person_name_content"
+                    style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+                    <!-- Thanh mẫu -->
+                    <span class="close" id="closePersonNameBtn">&times;</span>
+                    <div>
+                        <h2>Tên Người</h2>
+                        <input type="text" id="searchPersonName" placeholder="Tìm kiếm tên...">
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Từ Vựng</th>
+                                    <th>Ý nghĩa</th>
+                                    <th>Cách đọc</th>
+                                    <th>Pinyin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="personNameTableBody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="main">
+            <!-- Nút mở bảng từ vựng -->
+            <div class="left_main">
+                <h1 class="title_left">
+                    OPTION
+                </h1>
+                <div>
+                    <button id="showVocabularyBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Xem toàn bộ từ vựng
+                    </button>
+                </div>
+                <div>
+                    <button id="showWordBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Thanh mẫu và vận mẫu
+                    </button>
+                </div>
+                <div>
+                    <button id="showRadicalBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách các bộ thủ
+                    </button>
+                </div>
+                <div>
+                    <button id="showGrammarBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách ngữ pháp
+                    </button>
+                </div>
+                <div>
+                    <button id="showPersonNameBtn" class="button-74" style="margin: 10px; width: 90%;">
+                        Danh sách tên người
+                    </button>
+                </div>
+                <div>
+                    <a href="./testChinese.html" class="button-74" style="margin: 10px; width: 90%; padding: 0;">
+                        Trắc nghiệm
+                    </a>
+                </div>
+                <div>
+                    <a href="./audio.html" class="button-74" style="margin: 10px; width: 90%; padding: 0;">
+                        Luyện nghe
+                    </a>
+                </div>
+            </div>
+            <div class="right_main">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <h1 class="title_right">
+                        MATCH CHINESE
+                    </h1>
+                </div>
+                <div class="right_main_button">
+                    <button id="showVocabularyGame" class="button-54" style="margin-right: 10px;">Từ vựng</button>
+                    <button id="showPronunciationGame" class="button-54" style="margin-right: 10px;">Phát âm</button>
+                    <button id="showPinyinGame" class="button-54" style="margin-right: 10px;">Pinyin</button>
+                    <button id="showSentenceGame" class="button-54" style="margin-right: 10px;">Giao tiếp</button>
+                    <button id="showPersonNameGame" class="button-54" style="margin-right: 10px;">Tên người</button>
+                </div>
+
+                <div id="isVocabularyGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label for="wordsPerRoundV" class="text_mobile_30">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundV" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnV" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30 limitbtn">
+                            <label for="limitWordsV">Chỉ lấy số từ cuối:</label>
+                            <input id="limitWordsV" type="number" placeholder="vd: 400">
+                            <button id="applyLimitBtnV">Áp dụng</button>
+                        </div>
+                        <div class="text_mobile_30">Điểm: <strong id="scoreV">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesV">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressV">Vòng 0/0</strong></div>
+                        <button id="nextBtnV" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul id="chineseListV" class="text_mobile_30"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Nghĩa</h2>
+                            <ul id="meanListV" class="text_mobile_30"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticeV"></p>
+                </div>
+
+                <div id="isPronunciationGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label for="wordsPerRoundP" class="text_mobile_30">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundP" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnP" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30">Điểm: <strong id="scoreP">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesP">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressP">Vòng 0/0</strong></div>
+                        <button id="nextBtnP" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul class="text_mobile_30" id="chineseListP"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Cách phát âm</h2>
+                            <ul class="text_mobile_30" id="pronunciationList"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticeP"></p>
+                </div>
+
+                <div id="isPinyinGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label for="wordsPerRoundPinyin" class="text_mobile_30">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundPinyin" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnPinyin" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30">Điểm: <strong id="scorePinyin">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesPinyin">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressPinyin">Vòng 0/0</strong></div>
+                        <button id="nextBtnPinyin" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul class="text_mobile_30" id="chineseListPinyin"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Pinyin</h2>
+                            <ul class="text_mobile_30" id="pinyinList"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticePinyin"></p>
+                </div>
+
+                <div id="isSentenceGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label class="text_mobile_30" for="wordsPerRoundSentence">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundSentence" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnSentence" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30">Điểm: <strong id="scoreSentence">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesSentence">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressSentence">Vòng 0/0</strong></div>
+                        <button id="nextBtnSentence" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul id="chineseListSentence" class="text_mobile_30"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Câu</h2>
+                            <ul id="sentenceList" class="text_mobile_30"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticeSentence"></p>
+                </div>
+
+
+                <div id="isPersonNameGame">
+                    <div class="controls" style="margin-bottom: 10px; margin-top: 20px;">
+                        <label class="text_mobile_30" for="wordsPerRoundPersonName">Số từ mỗi vòng:</label>
+                        <select id="wordsPerRoundPersonName" class="select_option">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                        <button id="restartBtnPersonName" class="button-8">Restart</button>
+                    </div>
+
+                    <section class="stats">
+                        <div class="text_mobile_30">Điểm: <strong id="scorePersonName">0</strong></div>
+                        <div class="text_mobile_30">Sai: <strong id="mistakesPersonName">0</strong></div>
+                        <div class="text_mobile_30">Tiến độ: <strong id="progressPersonName">Vòng 0/0</strong></div>
+                        <button id="nextBtnPersonName" disabled class="button-85">Next Round ▶</button>
+                    </section>
+
+                    <section class="game-container">
+                        <div class="column">
+                            <h2>Chinese</h2>
+                            <ul id="chineseListPersonName" class="text_mobile_30"></ul>
+                        </div>
+                        <div class="column">
+                            <h2>Tên</h2>
+                            <ul id="personNameList" class="text_mobile_30"></ul>
+                        </div>
+                    </section>
+
+                    <p class="notice text_mobile_30" id="noticePersonName"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="vocabulary.js"></script>
+    <script src="vocabularyList.js"></script>
+    <script src="radical.js"></script>
+    <script src="sentence.js"></script>
+    <script src="grammar.js"></script>
+    <script src="personName.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
