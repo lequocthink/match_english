@@ -10,7 +10,7 @@
 // preposition
 // conjunction
 // interjection
-const vocabularyList = [
+const vocabulary = [
     //    // { index: "", english: "", mean: "", pronunciation: "", partOfSpeech: "" },
     { index: "1", english: "tea", mean: "trà", pronunciation: "UK: /tiː/ | US: /tiː/", partOfSpeech: "noun" },
     { index: "2", english: "coffee", mean: "cà phê", pronunciation: "UK: /ˈkɒfi/ | US: /ˈkɔːfi/", partOfSpeech: "noun" },
