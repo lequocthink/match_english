@@ -1173,7 +1173,7 @@ btn.onclick = function () {
 searchInputVocabulary.addEventListener("input", function () {
   const keyword = this.value.toLowerCase().trim();
   const filtered = vocabularyList.filter(word =>
-    word.english.includes(keyword) ||
+    word.english.toLowerCase().includes(keyword) ||
     word.mean.toLowerCase().includes(keyword) ||
     word.pronunciation.toLowerCase().includes(keyword)
   );
