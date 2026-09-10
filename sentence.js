@@ -35,4 +35,12 @@ const sentence = [
     { index: "29", english: "Yes, I do.", mean: "Có, tôi có." },
     { index: "30", english: "What colour is the eraser?", mean: "Cục tẩy màu gì?" },
     { index: "31", english: "I have a pencil case.", mean: "Tôi có một hộp bút." },
+    { index: "32", english: "I play badminton at break time.", mean: "Tôi chơi cầu lông vào giờ ra chơi." },
+    { index: "33", english: "I do word puzzles.", mean: "Tôi chơi trò giải ô chữ." },
+    { index: "34", english: "Is your mother a worker?", mean: "Mẹ của bạn có phải là công nhân không?" },
+    { index: "35", english: "What about your family?", mean: "Còn gia đình của bạn thì sao?" },
+    { index: "36", english: "The bedroom is here.", mean: "Phòng ngủ ở đây." },
+    { index: "37", english: "The lamps are on the table.", mean: "Những chiếc đèn ở trên bàn." },
+    { index: "38", english: "Where is the living room?", mean: "Phòng khách ở đâu?" },
+    { index: "39", english: "Look at the table and two chairs in my bedroom.", mean: "Hãy nhìn vào cái bàn và hai chiếc ghế trong phòng ngủ của tôi." },
 ];
