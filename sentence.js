@@ -43,4 +43,13 @@ const sentence = [
     { index: "37", english: "The lamps are on the table.", mean: "Những chiếc đèn ở trên bàn." },
     { index: "38", english: "Where is the living room?", mean: "Phòng khách ở đâu?" },
     { index: "39", english: "Look at the table and two chairs in my bedroom.", mean: "Hãy nhìn vào cái bàn và hai chiếc ghế trong phòng ngủ của tôi." },
+    { index: "40", english: "There are two chairs.", mean: "Có hai cái ghế." },
+    { index: "41", english: "What would you like to drink?", mean: "Bạn muốn uống gì?" },
+    { index: "42", english: "Would you like some water?", mean: "Bạn có muốn uống một ít nước không?" },
+    { index: "43", english: "There are a lot of food and drinks on the table.", mean: "Có rất nhiều đồ ăn và thức uống trên bàn." },
+    { index: "44", english: "I would like some milk, please.", mean: "Tôi muốn một ít sữa." },
+    { index: "45", english: "I have three rabbits.", mean: "Tôi có ba con thỏ." },
+    { index: "46", english: "Do you have any parrots?", mean: "Bạn có con vẹt nào không?" },
+    { index: "47", english: "How many birds do you have?", mean: "Bạn có bao nhiêu con chim?" },
+
 ];
