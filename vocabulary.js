@@ -539,6 +539,7 @@ const vocabulary = [
     { index: "522", english: "Bird", mean: "Chim; con chim; loài chim; con chim mái; người (cách nói thân mật, đặc biệt trong tiếng Anh Anh); cô gái/phụ nữ (cách nói thân mật, đôi khi lỗi thời); bắt chim; quan sát chim", pronunciation: "/bɜːd/", partOfSpeech: "Noun / Verb" },
     { index: "523", english: "Rabbit", mean: "Con thỏ; thỏ nhà; thỏ hoang; thịt thỏ; người nói nhiều (cách nói thân mật); nói chuyện liên tục về những điều không quan trọng", pronunciation: "/ˈræbɪt/", partOfSpeech: "Noun / Verb" },
     { index: "524", english: "Any", mean: "Bất kỳ; bất cứ; một chút nào; một ít nào; bất kỳ ai; bất kỳ cái gì; bất kỳ cái nào; một trong số; dù là ai/cái gì; bất cứ ... nào; chút nào (trong câu phủ định và nghi vấn)", pronunciation: "/ˈeni/", partOfSpeech: "Determiner / Pronoun / Adverb" },
+    // Ôn tập logistic
     { index: "525", english: "Shipment", mean: "Lô hàng; hàng hóa được vận chuyển; việc vận chuyển hàng; chuyến hàng; hàng gửi đi", pronunciation: "/ˈʃɪpmənt/", partOfSpeech: "Noun" },
     { index: "526", english: "Warehouse", mean: "Nhà kho; kho hàng; kho chứa hàng; lưu trữ hàng hóa trong kho", pronunciation: "/ˈweəhaʊs/", partOfSpeech: "Noun / Verb" },
     { index: "527", english: "Arrive", mean: "Đến; tới; đến nơi; đến một địa điểm; đến vào một thời điểm; đạt được; xuất hiện; đến tay người nhận", pronunciation: "/əˈraɪv/", partOfSpeech: "Verb" },
@@ -641,6 +642,32 @@ const vocabulary = [
     { index: "624", english: "Urgent", mean: "Khẩn cấp; cấp bách; khẩn; cần được xử lý ngay; cần hành động ngay lập tức", pronunciation: "/ˈɜːdʒənt/", partOfSpeech: "Adjective" },
     { index: "625", english: "Immediate", mean: "Ngay lập tức; tức thì; ngay; trực tiếp; gần nhất; liền kề; hiện tại; không trì hoãn; xảy ra ngay sau đó", pronunciation: "/ɪˈmiːdiət/", partOfSpeech: "Adjective" },
     { index: "626", english: "Prioritize", mean: "Ưu tiên; đặt thứ tự ưu tiên; xử lý việc quan trọng trước; dành ưu tiên cho", pronunciation: "/praɪˈɒrətaɪz/", partOfSpeech: "Verb" },
+    // End - Ôn tập logistic
+    { index: "627", english: "Pack", mean: "Gói; kiện; bưu kiện; gói hàng; ba lô; nhóm; đàn; bầy; đóng gói; đóng thành gói; xếp đồ; đóng hành lý; nhồi/đóng đầy; mang theo; chất đầy; đi bộ/di chuyển nhanh", pronunciation: "/pæk/", partOfSpeech: "Noun / Verb" },
+    { index: "628", english: "Available", mean: "Có sẵn; có thể sử dụng; có thể mua; có thể lấy được; còn hàng; rảnh; sẵn sàng; có hiệu lực; có thể tiếp cận", pronunciation: "/əˈveɪləbl/", partOfSpeech: "Adjective" },
+    { index: "629", english: "Ship", mean: "Tàu; tàu thủy; con tàu; chuyến tàu; vận chuyển bằng đường biển; gửi hàng; chuyển hàng; giao hàng; vận chuyển; đưa lên tàu; thuyền", pronunciation: "/ʃɪp/", partOfSpeech: "Noun / Verb" },
+    { index: "630", english: "Plane", mean: "Máy bay; phi cơ; mặt phẳng; mặt phẳng hình học; cấp độ; tầng; mức độ; bào; làm phẳng; san phẳng; bay bằng máy bay", pronunciation: "/pleɪn/", partOfSpeech: "Noun / Adjective / Verb" },
+    { index: "631", english: "Train", mean: "Tàu hỏa; xe lửa; đoàn tàu; chuỗi; đoàn; huấn luyện; đào tạo; rèn luyện; huấn luyện ai; được đào tạo; hướng dẫn; tập luyện; dạy; chuẩn bị", pronunciation: "/treɪn/", partOfSpeech: "Noun / Verb" },
+    { index: "632", english: "Basket", mean: "Cái giỏ; rổ; sọt; giỏ đựng hàng; giỏ đựng đồ; một giỏ hàng; cú ném bóng vào rổ; rổ bóng; một nhóm các vật/tiền tệ được xem xét cùng nhau", pronunciation: "/ˈbɑːskɪt/", partOfSpeech: "Noun" },
+    { index: "633", english: "Television", mean: "Tivi; truyền hình; máy truyền hình; chương trình truyền hình; ngành truyền hình; phương tiện truyền thông truyền hình", pronunciation: "/ˈtelɪvɪʒən/", partOfSpeech: "Noun" },
+    { index: "634", english: "Homework", mean: "Bài tập về nhà; bài tập được giao về nhà; việc học/làm bài ở nhà; công việc cần làm ở nhà", pronunciation: "/ˈhəʊmwɜːk/", partOfSpeech: "Noun" },
+    { index: "635", english: "Outdoor", mean: "Ngoài trời; ở ngoài trời; thuộc về ngoài trời; hoạt động ngoài trời; không gian ngoài trời", pronunciation: "/ˈaʊtdɔː(r)/", partOfSpeech: "Adjective / Adverb / Noun" },
+    { index: "636", english: "Skate", mean: "Giày trượt; ván trượt; giày trượt băng; trượt; trượt băng; trượt patin; di chuyển bằng giày trượt", pronunciation: "/skeɪt/", partOfSpeech: "Noun / Verb" },
+    { index: "637", english: "Roll", mean: "Cuộn; cuộn tròn; cuộn lại; lăn; lăn tròn; quay; lăn bánh; cuộn (giấy/vải); ổ bánh mì; cuộn; danh sách; danh sách tên; vòng/cuộn; tiếng lăn; lắc/lăn; xoay; quay; đảo/đảo người", pronunciation: "/rəʊl/", partOfSpeech: "Noun / Verb" },
+    { index: "638", english: "Roller skating", mean: "Trượt patin; môn trượt patin; hoạt động di chuyển bằng giày trượt có bánh xe", pronunciation: "/ˈrəʊlə ˌskeɪtɪŋ/", partOfSpeech: "Noun" },
+    { index: "639", english: "Cycle", mean: "Xe đạp; chu kỳ; vòng; chu trình; chu kỳ thời gian; chu kỳ hoạt động; đi xe đạp; đạp xe; quay vòng; lặp lại theo chu kỳ", pronunciation: "/ˈsaɪkəl/", partOfSpeech: "Noun / Verb" },
+    { index: "640", english: "Rope", mean: "Dây thừng; dây; sợi dây; dây buộc; dây kéo; dây nhảy; buộc bằng dây; trói bằng dây; dùng dây để kéo; dẫn bằng dây", pronunciation: "/rəʊp/", partOfSpeech: "Noun / Verb" },
+    { index: "641", english: "Skip", mean: "Nhảy; nhảy chân sáo; nhảy dây; bỏ qua; bỏ sót; không làm/không tham gia; bỏ qua một bước; trốn học; vắng mặt; thùng rác lớn; bước nhảy; sự bỏ qua", pronunciation: "/skɪp/", partOfSpeech: "Verb / Noun" },
+    { index: "642", english: "Rope skipping", mean: "Nhảy dây; môn nhảy dây; hoạt động nhảy qua dây được quay quanh cơ thể", pronunciation: "/rəʊp ˈskɪpɪŋ/", partOfSpeech: "Noun" },
+    { index: "643", english: "Animal", mean: "Động vật; con vật; thú vật", pronunciation: "/ˈænɪml/", partOfSpeech: "Noun" },
+    { index: "644", english: "Peace", mean: "Hòa bình; sự yên bình; sự thanh thản; sự bình yên; trạng thái không có chiến tranh; sự hòa thuận; sự im lặng/yên tĩnh", pronunciation: "/piːs/", partOfSpeech: "Noun" },
+    { index: "645", english: "Peacock", mean: "Con công; người quá chú trọng đến vẻ ngoài; người thích khoe khoang", pronunciation: "/ˈpiːkɒk/", partOfSpeech: "Noun" },
+    { index: "646", english: "Count", mean: "Đếm; tính; đếm số; kể; tính đến; coi là; xem như; có giá trị; quan trọng; số lượng; lượt đếm; sự đếm; con số; khoản/mục; cáo trạng; tước bá tước", pronunciation: "/kaʊnt/", partOfSpeech: "Verb / Noun" },
+    { index: "647", english: "Swing", mean: "Đung đưa; đung đưa qua lại; lắc; vung; đánh/vung (vợt, gậy); xoay; thay đổi; dao động; xích đu; cú đánh; sự đung đưa; sự dao động; nhạc swing", pronunciation: "/swɪŋ/", partOfSpeech: "Verb / Noun" },
+    { index: "648", english: "Climb", mean: "Leo; trèo; leo lên; trèo lên; leo núi; tăng lên; gia tăng; leo thang; sự leo trèo; lần leo; độ dốc/đoạn dốc", pronunciation: "/klaɪm/", partOfSpeech: "Verb / Noun" },
+    { index: "649", english: "Tree", mean: "Cây; cây cối; thân cây; cây gia phả; cây phân nhánh; đuổi lên cây; đặt/lắp trên cây", pronunciation: "/triː/", partOfSpeech: "Noun / Verb" },
+    { index: "650", english: "Elephant", mean: "Con voi; người/vật rất lớn hoặc nặng", pronunciation: "/ˈelɪfənt/", partOfSpeech: "Noun" },
+    // Class 4
 
 
 
