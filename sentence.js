@@ -51,5 +51,20 @@ const sentence = [
     { index: "45", english: "I have three rabbits.", mean: "Tôi có ba con thỏ." },
     { index: "46", english: "Do you have any parrots?", mean: "Bạn có con vẹt nào không?" },
     { index: "47", english: "How many birds do you have?", mean: "Bạn có bao nhiêu con chim?" },
+    { index: "48", english: "Today I'm in the park with my friends.", mean: "Hôm nay tôi ở công viên với những người bạn của tôi." },
+    { index: "49", english: "We have a lot of fun in the park.", mean: "Chúng tôi có rất nhiều niềm vui ở công viên." },
+    { index: "50", english: "She is from America.", mean: "Cô ấy đến từ Mỹ." },
+    { index: "51", english: "Where is he from?", mean: "Anh ấy đến từ đâu?" },
+    { index: "52", english: "I go to bed at nine o'clock.", mean: "Tôi đi ngủ lúc chín giờ." },
+    { index: "53", english: "I get up at six thirty.", mean: "Tôi thức dậy lúc sáu giờ ba mươi." },
+    { index: "54", english: "What time do you have dinner?", mean: "Bạn ăn tối lúc mấy giờ?" },
+    { index: "55", english: "I do housework on Sundays.", mean: "Tôi làm việc nhà vào Chủ nhật." },
+    { index: "56", english: "What do you do on Mondays?", mean: "Bạn làm gì vào thứ Hai?" },
+    { index: "57", english: "What day is it today?", mean: "Hôm nay là thứ mấy?" },
+    { index: "58", english: "When is your birthday?", mean: "Sinh nhật của bạn là khi nào?" },
+    { index: "59", english: "My little sister cannot ride a bike.", mean: "Em gái nhỏ của tôi không thể đi xe đạp." },
+    { index: "60", english: "He can roller skate very well.", mean: "Cậu ấy có thể trượt patin rất giỏi." },
 
+
+    
 ];
