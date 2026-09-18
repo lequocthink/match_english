@@ -882,7 +882,20 @@ const vocabulary = [
     { index: "861", english: "Typical", mean: "Điển hình; tiêu biểu; đặc trưng; điển hình cho; thường thấy; thông thường; đặc thù; đại diện cho một loại/người/vật", pronunciation: "/ˈtɪpɪkl/", partOfSpeech: "Adjective" },
     { index: "862", english: "Ideal", mean: "Lý tưởng; hoàn hảo; phù hợp nhất; tối ưu; đáng mong muốn; thuộc về ý tưởng; tiêu chuẩn lý tưởng; người/vật lý tưởng; mục tiêu lý tưởng", pronunciation: "/aɪˈdɪəl/", partOfSpeech: "Adjective / Noun" },
     { index: "863", english: "Candidate", mean: "Ứng viên; người dự tuyển; ứng cử viên; người được đề cử; người có khả năng trở thành; ứng viên cho một vị trí/công việc; thí sinh", pronunciation: "/ˈkændɪdeɪt/", partOfSpeech: "Noun" },
-
+    { index: "864", english: "Colleague", mean: "Đồng nghiệp; người cùng làm việc; cộng sự; người cùng nghề; bạn đồng nghiệp", pronunciation: "/ˈkɒliːɡ/", partOfSpeech: "Noun" },
+    { index: "865", english: "Far", mean: "Xa; ở xa; cách xa; xa xôi; rất nhiều; hơn nhiều; đến mức nào; bao xa; trong tương lai xa; lâu; xa về thời gian; cực kỳ; đáng kể; đi xa; tiến xa; từ xa", pronunciation: "/fɑː(r)/", partOfSpeech: "Adjective / Adverb / Noun" },
+    { index: "866", english: "Grow", mean: "Lớn lên; phát triển; trưởng thành; mọc; trồng; nuôi; tăng lên; gia tăng; trở nên; trở thành; phát triển dần; mở rộng; nuôi dưỡng; để tóc/râu dài; mọc lên; sinh trưởng; phát triển về quy mô; phát triển kinh doanh", pronunciation: "/ɡrəʊ/", partOfSpeech: "Verb" },
+    { index: "867", english: "Garment", mean: "Quần áo; trang phục; món đồ may mặc; sản phẩm may mặc; hàng may mặc; một bộ/phần quần áo", pronunciation: "/ˈɡɑːmənt/", partOfSpeech: "Noun" },
+    { index: "868", english: "As far as", mean: "Theo như; trong phạm vi; xét về; về mặt; xa đến mức; cho đến mức; theo những gì tôi biết/quan sát được", pronunciation: "/əz fɑːr əz/", partOfSpeech: "Conjunction / Preposition" },
+    { index: "869", english: "Confident", mean: "Tự tin; tin tưởng; chắc chắn; tin chắc; có niềm tin vào khả năng của bản thân; tự tin khi giao tiếp; chắc chắn rằng điều gì sẽ xảy ra", pronunciation: "/ˈkɒnfɪdənt/", partOfSpeech: "Adjective" },
+    { index: "870", english: "Graduate", mean: "Tốt nghiệp; tốt nghiệp đại học; hoàn thành chương trình học; người tốt nghiệp; sinh viên tốt nghiệp; cử nhân; sau đại học; tốt nghiệp và nhận bằng; chuyển sang giai đoạn cao hơn", pronunciation: "/ˈɡrædʒuət/ (Noun / Adjective), /ˈɡrædʒueɪt/ (Verb)", partOfSpeech: "Noun / Verb / Adjective" },
+    { index: "871", english: "University", mean: "Trường đại học; đại học; trường/viện đại học; hệ thống giáo dục đại học; khuôn viên trường đại học", pronunciation: "/ˌjuːnɪˈvɜːsəti/", partOfSpeech: "Noun" },
+    { index: "872", english: "Engineer", mean: "Kỹ sư; kỹ sư xây dựng/điện/cơ khí/phần mềm; người thiết kế hoặc phát triển hệ thống; kỹ thuật viên chuyên môn; thiết kế; chế tạo; sắp xếp/điều khiển một cách có tính toán; dàn dựng", pronunciation: "/ˌendʒɪˈnɪə(r)/", partOfSpeech: "Noun / Verb" },
+    { index: "873", english: "Hometown", mean: "Quê nhà; quê hương; quê quán; thành phố/thị trấn nơi một người sinh ra hoặc lớn lên", pronunciation: "/ˈhəʊmtaʊn/", partOfSpeech: "Noun" },
+    { index: "874", english: "Group", mean: "Nhóm; nhóm người; nhóm vật; tập hợp; đội; đoàn; nhóm làm việc; nhóm nhạc; nhóm dữ liệu; nhóm trong xã hội; nhóm lại; gom nhóm; tập hợp; phân nhóm", pronunciation: "/ɡruːp/", partOfSpeech: "Noun / Verb" },
+    { index: "875", english: "Fix", mean: "Sửa; sửa chữa; khắc phục; giải quyết; điều chỉnh; cố định; gắn chặt; đặt; sắp xếp; định; ấn định; xác định; chuẩn bị; chữa; xử lý lỗi; giải quyết vấn đề; gian lận/dàn xếp; giải pháp; cách giải quyết; sự sửa chữa; tình trạng khó khăn; sự ấn định; giá cố định", pronunciation: "/fɪks/", partOfSpeech: "Verb / Noun" },
+    { index: "876", english: "Practice", mean: "Sự thực hành; việc luyện tập; thực hành; luyện tập; thực tiễn; thói quen; thông lệ; phương pháp làm việc; hoạt động nghề nghiệp; phòng khám; hành nghề; thực hành một kỹ năng; luyện tập; áp dụng; thực hiện thường xuyên", pronunciation: "/ˈpræktɪs/", partOfSpeech: "Noun / Verb" },
+    { index: "877", english: "Topic", mean: "Chủ đề; đề tài; vấn đề; nội dung được thảo luận; chủ điểm; đề mục; chủ đề của cuộc trò chuyện/bài viết", pronunciation: "/ˈtɒpɪk/", partOfSpeech: "Noun" },
 
 
 
