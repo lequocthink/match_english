@@ -107,6 +107,12 @@ const sentence = [
     { index: "101", english: "Were you at the campsite yesterday?", mean: "Hôm qua bạn có ở khu cắm trại không?" },
     { index: "102", english: "Where were you last summer?", mean: "Mùa hè năm ngoái bạn đã ở đâu?" },
     { index: "103", english: "How many buildings are there at your school?", mean: "Có bao nhiêu tòa nhà ở trường của bạn?" },
+    { index: "104", english: "I live in Can Tho City.", mean: "Tôi sống ở thành phố Cần Thơ." },
+    { index: "105", english: "They live in a big house in a busy town.", mean: "Họ sống trong một ngôi nhà lớn ở một thị trấn nhộn nhịp." },
+    { index: "106", english: "Emma and her family live in a small flat.", mean: "Emma và gia đình cô ấy sống trong một căn hộ nhỏ." },
+    { index: "107", english: "She works at a nursing home.", mean: "Cô ấy làm việc tại một viện dưỡng lão." },
+    { index: "108", english: "My father has a round face, and my mother has long hair.", mean: "Bố tôi có khuôn mặt tròn, còn mẹ tôi có mái tóc dài." },
+    { index: "109", english: "I wash the dishes after dinner.", mean: "Tôi rửa bát sau bữa tối." },
 
     
 ];
