@@ -113,6 +113,19 @@ const sentence = [
     { index: "107", english: "She works at a nursing home.", mean: "Cô ấy làm việc tại một viện dưỡng lão." },
     { index: "108", english: "My father has a round face, and my mother has long hair.", mean: "Bố tôi có khuôn mặt tròn, còn mẹ tôi có mái tóc dài." },
     { index: "109", english: "I wash the dishes after dinner.", mean: "Tôi rửa bát sau bữa tối." },
+    { index: "110", english: "He has short hair and a round face.", mean: "Anh ấy có mái tóc ngắn và khuôn mặt tròn." },
+    { index: "111", english: "He cleans the floor in the morning.", mean: "Anh ấy lau sàn nhà vào buổi sáng." },
+    { index: "112", english: "It's rainy in Hue today.", mean: "Hôm nay ở Huế trời mưa." },
+    { index: "113", english: "What was the weather like in Ho Chi Minh City yesterday?", mean: "Thời tiết ở Thành phố Hồ Chí Minh hôm qua như thế nào?" },
+    { index: "114", english: "Do you want to go to the bakery with me?", mean: "Bạn có muốn đi đến tiệm bánh với tôi không?" },
+    { index: "115", english: "Turn around, the hospital is on Hoa Binh Street.", mean: "Hãy quay lại, bệnh viện ở đường Hòa Bình." },
+    { index: "116", english: "Turn right over there.", mean: "Rẽ phải ở đằng kia." },
+    { index: "117", english: "Look at the road sign. What does it say?", mean: "Hãy nhìn vào biển báo giao thông. Nó ghi gì vậy?" },
+    { index: "118", english: "Bill is putting up a tent.", mean: "Bill đang dựng lều." },
+    { index: "119", english: "Some boys are playing tug of war.", mean: "Một số cậu bé đang chơi kéo co." },
+    
+
+
 
     
 ];
