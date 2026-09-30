@@ -1192,7 +1192,13 @@ const vocabularyList = [
     { index: "1167", english: "Crowded", mean: "Đông đúc; chật chội; đầy người; có quá nhiều người hoặc vật; đông người; kín chỗ; chen chúc; có nhiều thứ tập trung trong một không gian nhỏ", pronunciation: "/ˈkraʊdɪd/", partOfSpeech: "Adjective" },
     { index: "1168", english: "Mask", mean: "Mặt nạ; khẩu trang; mặt nạ hóa trang; mặt nạ bảo hộ; vật che mặt; lớp che phủ; vẻ ngoài che giấu cảm xúc hoặc bản chất thật; che giấu; che đậy; ngụy trang; che mặt; che giấu một điều gì", pronunciation: "/mɑːsk/", partOfSpeech: "Noun / Verb" },
     { index: "1169", english: "Pill", mean: "Viên thuốc; thuốc viên; viên nén; thuốc uống; viên tránh thai; viên thuốc dùng để điều trị hoặc phòng bệnh; người khó chịu hoặc đáng ghét (informal); điều khó chịu hoặc khó chấp nhận (informal); nuốt thuốc; uống thuốc", pronunciation: "/pɪl/", partOfSpeech: "Noun / Verb" },
-
+    { index: "1170", english: "Ad", mean: "Quảng cáo; mẩu quảng cáo; thông tin quảng bá; quảng cáo trên báo, truyền hình, Internet hoặc mạng xã hội; advertisement (cách viết rút gọn)", pronunciation: "/æd/", partOfSpeech: "Noun" },
+    { index: "1171", english: "Admin", mean: "Quản trị viên; người quản trị; người quản lý hệ thống; người quản lý website, diễn đàn hoặc nhóm trực tuyến; quản trị; công việc quản lý và điều hành; administration (cách viết rút gọn)", pronunciation: "/ˈædmɪn/", partOfSpeech: "Noun / Verb" },
+    { index: "1172", english: "Headache", mean: "Đau đầu; cơn đau đầu; chứng đau đầu; vấn đề gây phiền toái; việc khó khăn hoặc gây rắc rối; người hoặc điều gây phiền phức", pronunciation: "/ˈhedeɪk/", partOfSpeech: "Noun" },
+    { index: "1173", english: "Couch", mean: "Ghế sofa; ghế dài; trường kỷ; ghế dài dùng để ngồi hoặc nằm; ghế khám bệnh; diễn đạt; diễn đạt một ý tưởng hoặc điều gì đó theo một cách nhất định; đặt hoặc trình bày bằng lời", pronunciation: "/kaʊtʃ/", partOfSpeech: "Noun / Verb" },
+    { index: "1174", english: "Bored", mean: "Chán; buồn chán; cảm thấy không hứng thú; cảm thấy tẻ nhạt; cảm thấy mệt mỏi vì không có gì thú vị để làm", pronunciation: "/bɔːd/", partOfSpeech: "Adjective" },
+    { index: "1175", english: "Parade", mean: "Cuộc diễu hành; đoàn diễu hành; cuộc duyệt binh; đoàn người hoặc phương tiện đi thành hàng để biểu diễn; cuộc trình diễn công khai; sự phô trương; diễu hành; duyệt binh; diễu qua; trình diễn hoặc phô bày một cách công khai", pronunciation: "/pəˈreɪd/", partOfSpeech: "Noun / Verb" },
+    { index: "1176", english: "Decide", mean: "Quyết định; quyết định làm gì; quyết định chọn điều gì; đưa ra quyết định; quyết định sau khi cân nhắc; giải quyết; phân xử; quyết định kết quả của một vấn đề; làm cho một vấn đề được giải quyết", pronunciation: "/dɪˈsaɪd/", partOfSpeech: "Verb" },
 
 
 ];
