@@ -62,7 +62,11 @@
                         <h2>Tất cả từ vựng</h2>
                         
                         <!-- ô tìm kiếm -->
-                        <input type="text" id="searchInputVocabulary" placeholder="Tìm kiếm từ vựng...">
+                        <div style="display: flex; justify-content: center; align-items: center;">
+
+                            <input type="text" id="searchInputVocabulary" placeholder="Tìm kiếm từ vựng...">
+                            <button type="button" id="restartSearchtnV" style="background: white; border: 1px solid black; font-size: 15px; border-radius: 50%; margin: 0;">↺</button>
+                        </div>
                     </div>
                     <span id="topLineVocablary"></span>
                     <a href="#bottomLineVocablary" class="close" id="topVocabulary" >
@@ -1067,6 +1071,26 @@
                             <label for="limitWordsV">Chỉ lấy số từ cuối:</label>
                             <input id="limitWordsV" type="number" placeholder="vd: 400">
                             <button id="applyLimitBtnV">Áp dụng</button>
+                        </div>
+                        <div class="text_mobile_30 limitbtn">
+                            <div style="margin: 10px; display: flex; justify-content: center; align-items: center;">
+                                <label for="startIndexV">Start:</label>
+                                <input
+                                    id="startIndexV"
+                                    type="number"
+                                    min="0"
+                                    placeholder="VD: 50"
+                                >
+                                <label for="endIndexV">End:</label>
+                                <input
+                                    id="endIndexV"
+                                    type="number"
+                                    min="0"
+                                    placeholder="VD: 250"
+                                >
+                            </div>
+
+                            <button id="applyRangeBtnV" style="margin-top: 0;">Áp dụng</button>
                         </div>
                         <div class="text_mobile_30">Điểm: <strong id="scoreV">0</strong></div>
                         <div class="text_mobile_30">Sai: <strong id="mistakesV">0</strong></div>

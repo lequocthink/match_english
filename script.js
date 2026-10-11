@@ -48,6 +48,10 @@ function vocabularyGame() {
   let selectedChinese = null; // li
   let selectedMean = null;    // li
 
+  // lấy theo khoảng
+  let startIndex = null;
+  let endIndex = null;
+
   /*******************************
    * 3) HÀM TIỆN ÍCH
    *******************************/
@@ -86,7 +90,21 @@ function vocabularyGame() {
    *******************************/
   function buildOrderAndReset() {
     // Xác định vocabulary đang chơi
-    if (limitWords && limitWords > 0 && limitWords < vocabulary.length) {
+    // Ưu tiên lấy từ theo khoảng index
+    if (
+        startIndex !== null &&
+        endIndex !== null &&
+        startIndex >= 1 &&
+        endIndex >= startIndex &&
+        startIndex < vocabulary.length
+    ) {
+        activeVocabulary = vocabulary.slice(
+            startIndex - 1,
+            endIndex
+        );
+
+    // Lấy N từ cuối
+    } else if (limitWords && limitWords > 0 && limitWords < vocabulary.length) {
       activeVocabulary = vocabulary.slice(-limitWords); // lấy N từ cuối
     } else {
       activeVocabulary = vocabulary;
@@ -243,6 +261,37 @@ function vocabularyGame() {
     } else {
       limitWords = null; // reset về tất cả
     }
+    buildOrderAndReset();
+  });
+
+  // lấy theo khoảng
+  document.getElementById("applyRangeBtnV").addEventListener("click", () => {
+    const startVal = document.getElementById("startIndexV").value;
+    const endVal = document.getElementById("endIndexV").value;
+
+    const start = Number(startVal);
+    const end = Number(endVal);
+
+    if (
+        startVal !== "" &&
+        endVal !== "" &&
+        Number.isInteger(start) &&
+        Number.isInteger(end) &&
+        start >= 1 &&
+        end >= start &&
+        start <= vocabulary.length
+    ) {
+        startIndex = start;
+        endIndex = Math.min(end, vocabulary.length);
+
+        // Tắt chế độ lấy N từ cuối
+        limitWords = null;
+
+    } else {
+        alert("Vui lòng nhập index hợp lệ!");
+        return;
+    }
+
     buildOrderAndReset();
   });
 }
@@ -1178,6 +1227,12 @@ searchInputVocabulary.addEventListener("input", function () {
     word.pronunciation.toLowerCase().includes(keyword)
   );
   renderVocabulary(filtered);
+});
+
+document.getElementById("restartSearchtnV").addEventListener("click", () => {
+  searchInputVocabulary.value = "";
+  renderVocabulary(vocabularyList);
+  // modal.style.display = "block";
 });
 
 // Đóng popup
