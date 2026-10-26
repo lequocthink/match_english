@@ -147,7 +147,14 @@ const sentence = [
     { index: "141", english: "The sun shines in the sky.", mean: "Mặt trời chiếu sáng trên bầu trời." },
     { index: "142", english: "The sun rises in the east and sets in the west.", mean: "Mặt trời mọc ở phía đông và lặn ở phía tây." },
     { index: "143", english: "Alex is an active boy. He does many things. He is playing badminton now.", mean: "Alex là một cậu bé năng động. Cậu ấy làm nhiều việc. Hiện tại, cậu ấy đang chơi cầu lông." },
-
+    { index: "144", english: "What would you like to be in the future?", mean: "Bạn muốn trở thành người như thế nào trong tương lai?" },
+    { index: "145", english: "I would like to be a firefighter.", mean: "Tôi muốn trở thành lính cứu hỏa." },
+    { index: "146", english: "Why would you like to be a doctor?", mean: "Tại sao bạn muốn trở thành bác sĩ?" },
+    { index: "147", english: "It is on the first floor.", mean: "Nó ở tầng một." },
+    { index: "148", english: "Go along the corridor and turn left.", mean: "Đi dọc theo hành lang và rẽ trái." },
+    { index: "149", english: "Go past the library and turn right.", mean: "Đi qua thư viện và rẽ phải." },
+    { index: "150", english: "Can you tell me the way to the computer room, please?", mean: "Bạn có thể vui lòng chỉ cho tôi đường đến phòng máy tính được không?" },
+    { index: "151", english: "Go upstairs. It's on the first floor.", mean: "Đi lên cầu thang. Nó ở tầng một." },
 
 
     
