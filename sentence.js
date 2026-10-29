@@ -155,7 +155,19 @@ const sentence = [
     { index: "149", english: "Go past the library and turn right.", mean: "Đi qua thư viện và rẽ phải." },
     { index: "150", english: "Can you tell me the way to the computer room, please?", mean: "Bạn có thể vui lòng chỉ cho tôi đường đến phòng máy tính được không?" },
     { index: "151", english: "Go upstairs. It's on the first floor.", mean: "Đi lên cầu thang. Nó ở tầng một." },
-
+    { index: "152", english: "He likes solving math problems.", mean: "Cậu ấy thích giải các bài toán." },
+    { index: "153", english: "Whose glue stick is this?", mean: "Đây là thỏi hồ khô của ai?" },
+    { index: "154", english: "The picture is above the board.", mean: "Bức tranh ở phía trên bảng." },
+    { index: "155", english: "They're very tidy.", mean: "Họ rất gọn gàng." },
+    { index: "156", english: "Trang's set square is on her desk, beside her pencil case, in front of her pencil sharpener.", mean: "Thước ê-ke của Trang ở trên bàn học, bên cạnh hộp bút và phía trước đồ gọt bút chì của cô ấy." },
+    { index: "157", english: "They love stories, especially fairy tales for children.", mean: "Họ yêu thích những câu chuyện, đặc biệt là truyện cổ tích dành cho trẻ em." },
+    { index: "158", english: "Were you at the funfair yesterday?", mean: "Hôm qua bạn có ở hội chợ vui chơi không?" },
+    { index: "159", english: "Were you and your cousins at the theatre?", mean: "Bạn và các anh chị em họ của bạn có ở nhà hát không?" },
+    { index: "160", english: "In the morning, we jogged around the lake.", mean: "Vào buổi sáng, chúng tôi chạy bộ quanh hồ." },
+    { index: "161", english: "They arrived there early in the morning. First, they enjoyed the cable car ride.", mean: "Họ đến đó vào sáng sớm. Đầu tiên, họ trải nghiệm chuyến đi bằng cáp treo." },
+    { index: "162", english: "They visited the famous building and the wax museum.", mean: "Họ tham quan tòa nhà nổi tiếng và bảo tàng tượng sáp." },
+    { index: "163", english: "Lan and her class enjoyed the cable car ride and walked over Golden Bridge.", mean: "Lan và lớp của cô ấy đã trải nghiệm chuyến đi bằng cáp treo và đi bộ qua Cầu Vàng." },
+    { index: "164", english: "They played some games at the amusement park and had some delicious seafood at a well-known restaurant.", mean: "Họ chơi một số trò chơi tại công viên giải trí và thưởng thức hải sản thơm ngon tại một nhà hàng nổi tiếng." },
 
     
 ];
