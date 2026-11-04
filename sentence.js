@@ -192,5 +192,29 @@ const sentence = [
     { index: "186", english: "Will we make spring rolls instead of Banh Chung for Tet, Mum?", mean: "Mẹ ơi, chúng ta sẽ làm nem thay vì bánh chưng vào dịp Tết phải không?" },
     { index: "187", english: "I think Ban Gioc Waterfall is beautiful and peaceful.", mean: "Tôi nghĩ thác Bản Giốc rất đẹp và thanh bình." },
     { index: "188", english: "He'll watch a fireworks show with his family.", mean: "Anh ấy sẽ xem một buổi trình diễn pháo hoa cùng gia đình." },
-        
+    { index: "189", english: "During the Mid-Autumn Festival, people often eat mooncakes and watch the full moon together.", mean: "Trong dịp Tết Trung thu, mọi người thường ăn bánh trung thu và cùng nhau ngắm trăng rằm." },
+    { index: "190", english: "What will you do on special days like Children's Day?", mean: "Bạn sẽ làm gì vào những ngày đặc biệt như ngày Quốc tế Thiếu nhi?" },
+    { index: "191", english: "Tet is a special festival for Vietnamese people.", mean: "Tết là một lễ hội đặc biệt đối với người Việt Nam." },
+    { index: "192", english: "What will you do on Sports Day?", mean: "Bạn sẽ làm gì vào ngày hội thể thao?" },
+    { index: "193", english: "We'll sing, dance and play the guitar on Teacher's Day.", mean: "Chúng tôi sẽ hát, nhảy múa và chơi đàn ghi-ta vào ngày Nhà giáo." },
+    { index: "194", english: "A branch of peach blossoms will bring good luck to my family.", mean: "Một cành hoa đào sẽ mang lại may mắn cho gia đình tôi." },
+    { index: "195", english: "Which one will you have for the party: burger or pizza?", mean: "Bạn sẽ chọn món nào cho bữa tiệc: bánh hamburger hay bánh pizza?" },
+    { index: "196", english: "They grew vegetables on a farm.", mean: "Họ đã trồng rau tại một trang trại." },
+    { index: "197", english: "Peter eats healthy food like fish and vegetables.", mean: "Peter ăn những thực phẩm lành mạnh như cá và rau." },
+    { index: "198", english: "I usually get up early to do morning exercise.", mean: "Tôi thường thức dậy sớm để tập thể dục buổi sáng." },
+    { index: "199", english: "He drinks fresh juice every day.", mean: "Anh ấy uống nước ép tươi mỗi ngày." },
+    { index: "200", english: "For breakfast, she usually eats an egg sandwich and some fresh fruit.", mean: "Vào bữa sáng, cô ấy thường ăn một chiếc bánh mì sandwich trứng và một ít trái cây tươi." },
+    { index: "201", english: "He does morning exercise regularly to stay healthy.", mean: "Anh ấy thường xuyên tập thể dục buổi sáng để giữ gìn sức khỏe." },
+    { index: "202", english: "My sister is a member of the aerobics club and she does aerobics twice a week.", mean: "Chị/em gái tôi là thành viên của câu lạc bộ thể dục nhịp điệu và cô ấy tập aerobic hai lần một tuần." },
+    { index: "203", english: "To stay healthy, you should eat fewer sausages.", mean: "Để giữ gìn sức khỏe, bạn nên ăn ít xúc xích hơn." },
+    { index: "204", english: "Good habits, like eating vegetables or doing exercise, help you stay healthy.", mean: "Những thói quen tốt, như ăn rau hoặc tập thể dục, giúp bạn duy trì sức khỏe." },
+    { index: "205", english: "Tell me about your lifestyle. Peter has a healthy lifestyle.", mean: "Hãy kể cho tôi nghe về lối sống của bạn. Peter có một lối sống lành mạnh." },
+    { index: "206", english: "The doctor asked, 'What is the matter with you today?'", mean: "Bác sĩ hỏi: 'Hôm nay bạn bị làm sao?'" },
+    { index: "207", english: "When you have a sore throat, you should not drink cold water.", mean: "Khi bị đau họng, bạn không nên uống nước lạnh." },
+    { index: "208", english: "I have a terrible stomachache.", mean: "Tôi bị đau bụng dữ dội." },
+    { index: "209", english: "When you have a toothache, you should go to the dentist.", mean: "Khi bị đau răng, bạn nên đến gặp nha sĩ." },
+    { index: "210", english: "Snow White cooked well.", mean: "Bạch Tuyết đã nấu ăn rất ngon." },
+
+
+
 ];
