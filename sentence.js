@@ -214,7 +214,22 @@ const sentence = [
     { index: "208", english: "I have a terrible stomachache.", mean: "Tôi bị đau bụng dữ dội." },
     { index: "209", english: "When you have a toothache, you should go to the dentist.", mean: "Khi bị đau răng, bạn nên đến gặp nha sĩ." },
     { index: "210", english: "Snow White cooked well.", mean: "Bạch Tuyết đã nấu ăn rất ngon." },
-
+    { index: "211", english: "Can you give me a piece of advice on skincare?", mean: "Bạn có thể cho tôi một lời khuyên về chăm sóc da không?" },
+    { index: "212", english: "You should go to the dentist as soon as possible.", mean: "Bạn nên đến nha sĩ càng sớm càng tốt." },
+    { index: "213", english: "Take your medicine as soon as possible when you feel pain.", mean: "Hãy uống thuốc càng sớm càng tốt khi bạn cảm thấy đau." },
+    { index: "214", english: "You should have a rest after a hard-working day.", mean: "Bạn nên nghỉ ngơi sau một ngày làm việc vất vả." },
+    { index: "215", english: "You should take some medicine and drink warm water.", mean: "Bạn nên uống một ít thuốc và uống nước ấm." },
+    { index: "216", english: "When you have a sore throat, you should rinse your mouth with salt water.", mean: "Khi bị đau họng, bạn nên súc miệng bằng nước muối." },
+    { index: "217", english: "The doctor told me to rinse the wound with clean water.", mean: "Bác sĩ bảo tôi rửa vết thương bằng nước sạch." },
+    { index: "218", english: "In the north of Viet Nam, spring is usually warm and humid.", mean: "Ở miền Bắc Việt Nam, mùa xuân thường ấm áp và ẩm ướt." },
+    { index: "219", english: "Butter is a dairy product. For breakfast, she usually has bread and butter with a glass of milk.", mean: "Bơ là một sản phẩm từ sữa. Vào bữa sáng, cô ấy thường ăn bánh mì phết bơ và uống một ly sữa." },
+    { index: "220", english: "You should eat carrots because they are good for your eyes.", mean: "Bạn nên ăn cà rốt vì chúng tốt cho mắt." },
+    { index: "221", english: "You should have a piece of cheese with wholegrain bread for breakfast.", mean: "Bạn nên ăn một miếng phô mai với bánh mì nguyên cám vào bữa sáng." },
+    { index: "222", english: "A cheese sandwich with salad is quite a good choice for lunch.", mean: "Một chiếc bánh mì kẹp phô mai ăn cùng salad là lựa chọn khá tốt cho bữa trưa." },
+    { index: "223", english: "He usually eats corn as a snack. Fresh corn is full of vitamins.", mean: "Anh ấy thường ăn ngô như một món ăn nhẹ. Ngô tươi chứa nhiều vitamin." },
+    { index: "224", english: "Yogurt is also a type of dairy product. The doctor told me to eat more dairy products because they are good for bones.", mean: "Sữa chua cũng là một loại sản phẩm từ sữa. Bác sĩ bảo tôi ăn nhiều sản phẩm từ sữa hơn vì chúng tốt cho xương." },
+    { index: "225", english: "Protein is good for your muscles. You should eat meat and eggs because they are rich in protein.", mean: "Protein tốt cho cơ bắp. Bạn nên ăn thịt và trứng vì chúng giàu protein." },
+    { index: "226", english: "You should eat low-fat yogurt to stay fit.", mean: "Bạn nên ăn sữa chua ít béo để giữ dáng." },
 
 
 ];
