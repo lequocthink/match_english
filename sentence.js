@@ -230,6 +230,21 @@ const sentence = [
     { index: "224", english: "Yogurt is also a type of dairy product. The doctor told me to eat more dairy products because they are good for bones.", mean: "Sữa chua cũng là một loại sản phẩm từ sữa. Bác sĩ bảo tôi ăn nhiều sản phẩm từ sữa hơn vì chúng tốt cho xương." },
     { index: "225", english: "Protein is good for your muscles. You should eat meat and eggs because they are rich in protein.", mean: "Protein tốt cho cơ bắp. Bạn nên ăn thịt và trứng vì chúng giàu protein." },
     { index: "226", english: "You should eat low-fat yogurt to stay fit.", mean: "Bạn nên ăn sữa chua ít béo để giữ dáng." },
+    { index: "227", english: "In autumn, I usually wear a shirt and jeans.", mean: "Vào mùa thu, tôi thường mặc áo sơ mi và quần jean." },
+    { index: "228", english: "In Ha Noi, it's cold and dry in winter.", mean: "Ở Hà Nội, mùa đông trời lạnh và khô." },
+    { index: "229", english: "You should wear a thick coat because it's freezing cold outside.", mean: "Bạn nên mặc một chiếc áo khoác dày vì bên ngoài trời lạnh cóng." },
+    { index: "230", english: "It's boiling hot today.", mean: "Hôm nay trời nóng như đổ lửa." },
+    { index: "231", english: "The weather in winter is often cold and snowy. It is snowy today, so you need to wear warm clothes.", mean: "Thời tiết vào mùa đông thường lạnh và có tuyết. Hôm nay trời có tuyết, vì vậy bạn cần mặc quần áo ấm." },
+    { index: "232", english: "I usually wear a skirt and a blouse in spring.", mean: "Tôi thường mặc chân váy và áo kiểu vào mùa xuân." },
+    { index: "233", english: "I usually wear a jumper, a coat, and boots in winter.", mean: "Tôi thường mặc áo len chui đầu, áo khoác và đi bốt vào mùa đông." },
+    { index: "234", english: "I usually wear trousers in summer. I want to buy a new pair of trousers.", mean: "Tôi thường mặc quần dài vào mùa hè. Tôi muốn mua một chiếc quần dài mới." },
+    { index: "235", english: "The flowers are blooming in spring. A blooming garden is perfect for a picnic.", mean: "Hoa đang nở vào mùa xuân. Một khu vườn đầy hoa đang nở rất thích hợp cho một buổi dã ngoại." },
+    { index: "236", english: "There are different climates in Viet Nam. We would like to visit a country with a warm climate.", mean: "Việt Nam có nhiều kiểu khí hậu khác nhau. Chúng tôi muốn đến thăm một đất nước có khí hậu ấm áp." },
+    { index: "237", english: "A hat and sunglasses are ideal for sunny days.", mean: "Một chiếc mũ và kính râm là những món đồ lý tưởng cho những ngày nắng." },
+    { index: "238", english: "Her outfit was perfect for spring with a light sweater and jeans.", mean: "Bộ trang phục của cô ấy rất phù hợp với mùa xuân, gồm một chiếc áo len mỏng và quần jean." },
+    { index: "239", english: "On windy days, I wrap my scarf around my neck.", mean: "Vào những ngày có gió, tôi quàng khăn quanh cổ." },
+    { index: "240", english: "In winter, I often wear a jumper, trousers, and a scarf when I go outside.", mean: "Vào mùa đông, tôi thường mặc áo len chui đầu, quần dài và quàng khăn khi ra ngoài." },
+
 
 
 ];
