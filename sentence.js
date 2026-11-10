@@ -244,6 +244,30 @@ const sentence = [
     { index: "238", english: "Her outfit was perfect for spring with a light sweater and jeans.", mean: "Bộ trang phục của cô ấy rất phù hợp với mùa xuân, gồm một chiếc áo len mỏng và quần jean." },
     { index: "239", english: "On windy days, I wrap my scarf around my neck.", mean: "Vào những ngày có gió, tôi quàng khăn quanh cổ." },
     { index: "240", english: "In winter, I often wear a jumper, trousers, and a scarf when I go outside.", mean: "Vào mùa đông, tôi thường mặc áo len chui đầu, quần dài và quàng khăn khi ra ngoài." },
+    { index: "241", english: "The main characters in the story are the ant and the grasshopper.", mean: "Các nhân vật chính trong câu chuyện là con kiến và con châu chấu." },
+    { index: "242", english: "The ant helped the grasshopper by sharing its food.", mean: "Con kiến đã giúp con châu chấu bằng cách chia sẻ thức ăn của mình." },
+    { index: "243", english: "Is the evil queen the minor character in the story?", mean: "Nữ hoàng độc ác có phải là nhân vật phụ trong câu chuyện không?" },
+    { index: "244", english: "As the crow answered the fox, the meat dropped to the ground.", mean: "Khi con quạ trả lời con cáo, miếng thịt đã rơi xuống đất." },
+    { index: "245", english: "Snow White and the Seven Dwarfs are the main characters in the story.", mean: "Bạch Tuyết và bảy chú lùn là những nhân vật chính trong câu chuyện." },
+    { index: "246", english: "Do you like the prince in this fairy tale?", mean: "Bạn có thích chàng hoàng tử trong câu chuyện cổ tích này không?" },
+    { index: "247", english: "The fox liked to trick other animals. It quickly took the meat and ran away.", mean: "Con cáo thích lừa những con vật khác. Nó nhanh chóng lấy miếng thịt rồi bỏ chạy." },
+    { index: "248", english: "When winter came, the grasshopper did not have any food.", mean: "Khi mùa đông đến, con châu chấu không có thức ăn." },
+    { index: "249", english: "The main characters in the story are the tortoise and the hare.", mean: "Các nhân vật chính trong câu chuyện là rùa và thỏ." },
+    { index: "250", english: "After a hard-working day, he falls asleep easily.", mean: "Sau một ngày làm việc vất vả, anh ấy dễ dàng chìm vào giấc ngủ." },
+    { index: "251", english: "The prince and Belle danced beautifully together.", mean: "Hoàng tử và Belle đã cùng nhau khiêu vũ thật đẹp." },
+    { index: "252", english: "The prince rode the magic carpet and flew fast to the castle.", mean: "Hoàng tử cưỡi tấm thảm thần và bay nhanh đến lâu đài." },
+    { index: "253", english: "Did the hare reach the finish line first?", mean: "Con thỏ đã về đích đầu tiên phải không?" },
+    { index: "254", english: "The hare ran fast, but the tortoise crossed the finish line first.", mean: "Con thỏ chạy nhanh, nhưng con rùa đã cán đích trước." },
+    { index: "255", english: "The ant worked hard to gather food for the winter.", mean: "Con kiến chăm chỉ thu thập thức ăn để chuẩn bị cho mùa đông." },
+    { index: "256", english: "The little girl gathered berries to share with the animals in the forest.", mean: "Cô bé hái những quả mọng để chia sẻ với các con vật trong rừng." },
+    { index: "257", english: "The dwarfs worked hard in the mine every day.", mean: "Những chú lùn làm việc chăm chỉ trong mỏ mỗi ngày." },
+    { index: "258", english: "The dragon flew away to a cave full of gems.", mean: "Con rồng bay đến một hang động đầy đá quý." },
+    { index: "259", english: "The fairy flew away after granting her a wish.", mean: "Bà tiên bay đi sau khi ban cho cô ấy một điều ước." },
+    { index: "260", english: "The giant was strong but not very intelligent.", mean: "Người khổng lồ khỏe mạnh nhưng không thông minh lắm." },
+    { index: "261", english: "The clever boy tricked the giant and escaped.", mean: "Cậu bé thông minh đã lừa người khổng lồ và trốn thoát." },
+    { index: "262", english: "The king placed his trust in the hero to protect the kingdom.", mean: "Nhà vua đặt niềm tin vào người anh hùng để bảo vệ vương quốc." },
+
+
 
 
 
